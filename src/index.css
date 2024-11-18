@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  height: var(--app-height);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  background-color: #111827;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Responsive text scaling */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior: none;
+}
+
+/* Smooth transitions for scaling */
+* {
+  transition: transform 0.2s ease-out;
+}
